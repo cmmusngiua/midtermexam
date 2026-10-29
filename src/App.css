@@ -1,0 +1,114 @@
+:root {
+  --bg-color: #f3f5f3;
+  --card-bg: #ffffff;
+  --sage-accent: #87a96b;
+  --sage-light: #e3ebe0;
+  --sage-hover: #75985b;
+  --text-dark: #2d372e;
+  --text-muted: #6b7c6c;
+  --border-color: #dce3db;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: var(--text-dark);
+}
+
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.calculator-card {
+  background: var(--card-bg);
+  width: 100%;
+  max-width: 380px;
+  border-radius: 20px;
+  padding: 1.8rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.student-info {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+}
+
+.display-screen {
+  background-color: var(--sage-light);
+  border-radius: 12px;
+  padding: 1.2rem;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.display-screen:hover {
+  opacity: 0.9;
+}
+
+.display-text {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.4;
+}
+
+.keypad-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.key-btn {
+  border: none;
+  background-color: #f7f9f7;
+  color: var(--text-dark);
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 1rem 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: 1px solid var(--border-color);
+}
+
+.key-btn:hover {
+  background-color: var(--sage-light);
+  transform: translateY(-1px);
+}
+
+.key-btn:active {
+  transform: translateY(0);
+}
+
+/* Accent style for NAME and SUBJ buttons */
+.key-btn.action-btn {
+  background-color: var(--sage-accent);
+  color: #ffffff;
+  border-color: var(--sage-accent);
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.key-btn.action-btn:hover {
+  background-color: var(--sage-hover);
+}
